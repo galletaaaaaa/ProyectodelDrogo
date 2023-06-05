@@ -1,92 +1,325 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-html{
-    background-image: url(https://imageio.forbes.com/blogs-images/startswithabang/files/2019/08/darknesses.jpg?format=jpg&width=960);
-    background-size: cover;
-}
+/*RESET*/
+@import url('https://fonts.cdnfonts.com/css/crete-round');
 *{
     margin:0;
     padding:0;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    font-size: 120%;
+    font-family: 'Crete Round', sans-serif;
+    font-family: 'Crete Round', sans-serif;
 }
-.boton1{
+/*HEADER*/
+header{
+    height: 100px;
+    background: rgb(110, 35, 35);
+    padding:0 50px;
+    color:#fff;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.logo{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 200;
+}
+.menu a{
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:0 20px;
+    transition: 0.4s;
+    margin:10px;
+}
+.mostrarmenu,
+.escondermenu{
+    font-size:30px;
+    cursor:pointer;
+    display:none;
+    transition: 0.4s;
+}
+.mostrarmenu{
+    order:1;
+}
+.menu a:hover,
+.mostrarmenu:hover,
+.escondermenu:hover{
+    color:lightslategray;
+}
+#check{
+    display:none;
+}
+/*BANNER*/
+#banner{
+    padding: 0 50px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/9b/Bundesarchiv_Bild_102-04458A%2C_Berlin%2C_Ankunft_des_englischen_Aussenministers.jpg);
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner::before{
+    content: '';
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+.contenido-banner{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido-banner h3{
+    text-shadow: 3px 4px 0 darkred;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+.boton{
+    text-decoration: none;
+    color: #fff;
+    border: 3px solid darkred;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+.boton:hover{
+    background: #6cc09070;
+}
+/*PLANTAS*/
+#plantas{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#plantas div img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 20px;
+}
+#plantas img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    object-fit: cover;
+    text-align: center;
+}
+#plantas img:hover{
+    transform: scale(1.2);
+}
+#plantas div{
+    padding:30px 30px;
+}
+#plantas div h4{
+ 
+    color: darkred;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+#plantas div p{
+    color:#000;
+    font-size: 18px;
+}
+/*ZOOM Y DECORACIÓN DE IMAGEN*/
+.botonsabermas{
     display: inline-block;
-    text-decoration:none;
-    color: #3b5998;;
-    padding:10px 30px;
-    border: 3px solid #3b5998;;
+    text-decoration: none;
+    color: darkred;
+    padding: 10px 30px;
+    border: 3px solid darkred;
     border-radius: 30px;
     margin-top: 15px;
     transition: all 0.4s;
 }
-.boton1:hover{
-    background-color: #3b5998;
+.botonsabermas:hover{
+    background: lightgray;
+    color: black;
+}
+/*ICONOS*/
+.contenidoiconos{
+    padding: 50px 50px 0px 50px;
+    display:flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.planta,
+.follow,
+.libro{
+    width: 70px;
+    height: 70px;
+}
+#iconos{
+    padding: 0px 50px;
+    background: rgba(77, 77, 92, 0.6);
+}
+.contenidoiconos div{
+    flex:1;
+    margin: 20px 0px;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+#iconomobile{
+    border: none;
+}
+.contenidoiconos div img{
+    color: #6cc091;
+}
+.contenidoiconos div h6{
+    color: black;
+    font-size: 20px;
+    font-weight: 100;
+    margin:10px 0px;
+}
+.contenidoiconos div p{
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 15px;
+}
+.botoniconos{
+    text-align: center;
+    padding-bottom: 50px;
+}
+/*FORMULARIOOOO*/
+#contacto{
+    background: #6cc091;
+    padding-bottom: 50px 0px;
     color: #fff;
 }
-.boton2{
-    display: inline-block;
-    text-decoration:none;
-    color: #E1306C;
-    padding:10px 30px;
-    border: 3px solid #E1306C;
-    border-radius: 30px;
-    margin-top: 15px;
-    transition: all 0.4s;
+#contacto h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
-.boton2:hover{
-    background-color: #E1306C;
+#contacto form{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.datosform{
+    display: flex;
+}
+.datosform div{
+    padding: 10px;
+    flex: 1;
+}
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+form input,
+form textarea{
+    background: #6cc091;
+    border-radius: 10px;
+    border: 2px solid #8dcca9;
+    padding: 10px 5px;
+    outline: 0;
+    color: #fff;
+    width: 100%;
+}
+form input:focus,
+form textarea:focus{
+    border-color:#4bae77;
+    box-shadow: 0 0 0 0 1px #4bae77;
+}
+form input::placeholder,
+form textarea::placeholder{
     color: #fff;
 }
-.boton3{
-    display: inline-block;
-    text-decoration:none;
-    color: #00acee;
-    padding:10px 30px;
-    border: 3px solid #00acee;
-    border-radius: 30px;
-    margin-top: 15px;
-    transition: all 0.4s;
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
-.boton3:hover{
-    background-color: #00acee;
-    color: #fff;
+.botonformulario .botonsabermas{
+    display: block;
+    border: 1px solid #fff;
+    color:#fff;
+    text-align: center;
+    transition: 0.4s;
 }
-.boton4{
-    display: inline-block;
-    text-decoration:none;
-    color: #6441a5;
-    padding:10px 30px;
-    border: 3px solid #6441a5;
-    border-radius: 30px;
-    margin-top: 15px;
-    transition: all 0.4s;
+.botonformulario .botonsabermas:hover{
+    background: #4fa777ad;
 }
-.boton4:hover{
-    background-color: #6441a5;
-    color: #fff;
+/*FOOTER*/
+footer{
+    background: #4D4D5C;
+    color: #cccccc4a;
+    text-align: center;
+    padding: 10px 10px;
 }
-.boton5{
-    display: inline-block;
-    text-decoration:none;
-    color: #31ca31;
-    padding:10px 30px;
-    border: 3px solid #31ca31;
-    border-radius: 30px;
-    margin-top: 15px;
-    transition: all 0.4s;
-}
-.boton5:hover{
-    background-color: #31ca31;
-    color: #fff;
-}
-
-/*RESPONSE*/
+/*RESPONSIVE*/
+/* ESTO APARENTEMENTE HACE QUE LA PAGINA SEA RESPONSIVA*/
 @media(max-width:800px){
-    html{
-        background-size: 180%;
+    /*HEADER*/
+    .mostrarmenu,
+    .escondermenu{
+        display: block;
     }
-    #followme{
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index:100;
+        transition:0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .escondermenu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    /*PLANTASXD¿?*/
+    #plantas{
         flex-direction: column;
+    }
+    /*ICONOS*/
+    .contenidoiconos{
+        flex-direction: column;
+    }
+    .contenidoiconos div{
+        border: none;
+    }
+    /*FORMULARIO*/
+    .datosform{
+        flex-direction: column;
+    }
+}
+@media(max-width:412px){
+    #plantas div img{
+        margin:20px  -50px;
+    }
+}
+@media(max-width:507px){
+    #plantas div img{
+        margin:20px  -50px;
+    }
+}
+@media(max-width:477px){
+    #plantas div img{
+        margin:20px  -50px;
+    }
+}
+@media(max-width:370px){
+    #plantas div img{
+        margin:20px  -50px;
     }
 }
