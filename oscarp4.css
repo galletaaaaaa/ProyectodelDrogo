@@ -1,15 +1,15 @@
 /*RESET*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/crete-round');
 *{
     margin:0;
     padding:0;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Crete Round', sans-serif;
+    font-family: 'Crete Round', sans-serif;
 }
 /*HEADER*/
 header{
     height: 100px;
-    background: #6cc091;
+    background: rgb(110, 35, 35);
     padding:0 50px;
     color:#fff;
     display: flex;
@@ -22,10 +22,11 @@ header{
     font-weight: 200;
 }
 .menu a{
+    font-size: 20px;
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
-    padding:0 10px;
+    padding:0 20px;
     transition: 0.4s;
     margin:10px;
 }
@@ -42,7 +43,7 @@ header{
 .menu a:hover,
 .mostrarmenu:hover,
 .escondermenu:hover{
-    color:#6cc091;
+    color:lightslategray;
 }
 #check{
     display:none;
@@ -72,7 +73,8 @@ header{
     justify-content: center;
 }
 .contenido-banner h3{
-    font-size: 30px;
+    text-shadow: 3px 4px 0 darkred;
+    font-size: 35px;
     font-weight: 400;
     padding: 10px 0px;
 }
@@ -82,13 +84,13 @@ header{
 .boton{
     text-decoration: none;
     color: #fff;
-    border: 1px solid #6cc091;
+    border: 3px solid darkred;
     padding: 20px 40px;
     align-self: baseline;
     transition: all 0.4s;
 }
 .boton:hover{
-    background: #6cc09070;
+    background: lightslategray;
 }
 /*PLANTAS*/
 #plantas{
@@ -109,19 +111,16 @@ header{
     height: 100%;
     transition: 0.5s;
     object-fit: cover;
-    transform: scale(1.2);
     text-align: center;
 }
 #plantas img:hover{
-    transform:scale(1.1);
-    overflow:hidden;
-    filter: saturate(180%);
+    transform: scale(1.2);
 }
 #plantas div{
     padding:30px 30px;
 }
 #plantas div h4{
-    color:#47f541;
+    color: darkred;
     font-size: 20px;
     margin: 15px 0px;
 }
@@ -133,16 +132,16 @@ header{
 .botonsabermas{
     display: inline-block;
     text-decoration: none;
-    color: #6cc091;
+    color: darkred;
     padding: 10px 30px;
-    border: 3px solid #6cc091;
+    border: 3px solid darkred;
     border-radius: 30px;
     margin-top: 15px;
     transition: all 0.4s;
 }
 .botonsabermas:hover{
-    background: #6cc091;
-    color: #fff;
+    background: lightgray;
+    color: black;
 }
 /*ICONOS*/
 #iconos{
